@@ -1,0 +1,17 @@
+{
+  "name": "webserver-example",
+  "version": "1.0.0",
+  "description": "Ciruict node.js web server app example using OAuth2",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/circuit/webserver-example.git"
+  },
+  "author": "Roger Urscheler",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "randomstring": "^1.1.5"
+  }
+}
