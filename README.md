@@ -14,7 +14,7 @@ Until the developer portal is ready to self-register an application, contact [Ro
 Edit index.js
 * Add client_id (aka application id, consumer key or app key)
 * Add secret (aka as consumer secret)
-* Optionally change the listening port (default 7100)
+* Optionally change the app domain and listening port
 
 ```bash
     git clone https://github.com/yourcircuit/webserver-example.git
