@@ -1,0 +1,11 @@
+{
+    "circuit": {
+        "domain": "circuitsandbox.net",
+        "client_id": "<your client_id>",
+        "client_secret": "<your client_secret>"
+    },
+    "app": {
+        "host": "http://localhost",
+        "port": 7007
+    }
+}

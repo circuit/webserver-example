@@ -2,23 +2,20 @@
 Example node.js web application to access the [circuit REST API](https://circuitsandbox.net/rest/v2/swagger). 
 The example shows how to authenticate using OAuth2 without any library and then perform REST calls.
 
-## Beta
-The circuit REST API and related examples are in Beta. While we are in Beta, we may still make incompatible changes. 
-
 ## Getting Started
 
 ### Register an application
-Until the developer portal is ready to self-register an application, contact [Roger Urscheler](mailto:roger.urscheler@unify.com). 
+Until the developer portal is ready to self-register an application, register using the form at https://circuit.github.io/oauth.html.
 
 ### Run the example
-Edit index.js
-* Add client_id (aka application id, consumer key or app key)
-* Add secret (aka as consumer secret)
-* Optionally change the app domain and listening port
+* Rename config.json.template to config.json and add your `client_id` and `client_secret`.
+* Change the host and listening port if the app is not hosted at http://localhost:7007
 
 ```bash
     git clone https://github.com/yourcircuit/webserver-example.git
     cd webserver-example
+    // Rename config.json.template to config.json and add your `client_id` and `client_secret`
+    // Change the host and listening port if the app is not hosted at http://localhost:7007
     npm install
     node index.js
 ``` 

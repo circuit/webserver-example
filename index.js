@@ -3,18 +3,19 @@ var http = require('http');
 var express = require('express');
 var Session = require('express-session');
 var request = require('request');
+var config = require('./config.json');
 var randomstring = require('randomstring');
 
 // Circuit REST API is in beta and only available on the sandbox at this time
-const CircuitDomain = 'https://circuitsandbox.net';
+const CircuitDomain = 'https://' + config.circuit.domain;
 
 // Domain and port this app is running at
-const AppDomain = 'http://localhost';
-const AppPort = 7100;
+const AppDomain = config.app.host;
+const AppPort = config.app.port;
 
 // OAuth2 configuration
-const ClientId = '<client_id';
-const ClientSecret = '<secret>';
+const ClientId = config.circuit.client_id;
+const ClientSecret = config.circuit.client_secret;
 const RedirectUri = `${AppDomain}:${AppPort}/oauthCallback`;
 const Scopes = 'READ_USER_PROFILE,READ_CONVERSATIONS';
 
@@ -48,7 +49,6 @@ app.get('/logout', (req, res) => {
 });
 
 app.use('/oauthCallback', (req, res) => {
-console.log(req.sessionID)
     if (req.query.code && req.session.oauthState === req.query.state) {
         request.post({
             url: `${CircuitDomain}/oauth/token`,
