@@ -7,8 +7,8 @@
     "type": "git",
     "url": "git+https://github.com/circuit/webserver-example.git"
   },
-  "author": "Roger Urscheler",
-  "license": "MIT",
+  "author": "Roger Urscheler, Unify Inc.",
+  "license": "Apache 2.0",
   "dependencies": {
     "express": "^4.14.0",
     "express-session": "^1.14.1",
