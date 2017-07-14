@@ -12,7 +12,7 @@ Until the developer portal is ready to self-register an application, register us
 * Change the host and listening port if the app is not hosted at http://localhost:7007
 
 ```bash
-    git clone https://github.com/yourcircuit/webserver-example.git
+    git clone https://github.com/circuit/webserver-example.git
     cd webserver-example
     // Rename config.json.template to config.json and add your `client_id` and `client_secret`
     // Change the host and listening port if the app is not hosted at http://localhost:7007
