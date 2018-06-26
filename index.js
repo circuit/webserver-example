@@ -84,7 +84,7 @@ app.get('/', (req, res) => {
     } else {
         let redirectUri = encodeURIComponent(RedirectUri);
         let state = randomstring.generate(12);
-        let url = `${CircuitDomain}/oauth/authorize?scope=${Scopes}&state=${state}&redirect_uri=${redirectUri}&,response_type=code&client_id=${ClientId}`;
+        let url = `${CircuitDomain}/oauth/authorize?scope=${Scopes}&state=${state}&redirect_uri=${redirectUri}&response_type=code&client_id=${ClientId}`;
         // Save state in session and check later to prevent CSRF attacks
         req.session.oauthState = state;
         res.send(`<a href=${url}>Login to Circuit</a>`);
